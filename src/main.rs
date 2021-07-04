@@ -32,7 +32,7 @@ async fn index(_req: Request<Body>) -> Result<Response<Body>, Infallible> {
 
     <p>agree? <input type="checkbox" name="terms" id="terms" style="width: 1.6em; height: 1.6em;" required /><br />
     <br />
-    chonkiness (1 - 100): <input inputmode="numeric" pattern="^[0-9].*$" type="text" name="chonk" id="chonk" value="74" style="padding: 0.5em; width: 4em;" required />
+    chonkiness (1 - 100): <input inputmode="numeric" pattern="[0-9]*" type="text" name="chonk" id="chonk" value="74" style="padding: 0.5em; width: 4em;" required />
     <input type="file" name="me-in" id="me-in" />
     </p>
 
