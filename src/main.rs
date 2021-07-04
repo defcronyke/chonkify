@@ -45,9 +45,10 @@ async fn index(_req: Request<Body>) -> Result<Response<Body>, Infallible> {
     Part of <a href="https://eternalvoid.net" style="color: black;">The Eternal Void Network</a>.
 
 <script>
+
+
 (function() {
     var meIn = document.getElementById('me-in');
-
     if (!meIn) {
         console.log('error: no input element');
         return;
@@ -59,18 +60,17 @@ async fn index(_req: Request<Body>) -> Result<Response<Body>, Infallible> {
         return;
     }
 
-    meIn.addEventListener('change', function(_e) {
-        var terms = document.getElementById('terms');
-        if (!terms) {
-            console.log('error: no terms element');
-            return;
-        }
+    var terms = document.getElementById('terms');
+    if (!terms) {
+        console.log('error: no terms element');
+        return;
+    }
 
+    var chonkIt = function() {
         if (!terms.checked) {
             var termsErr = 'error: you must agree to the terms to use this';
             console.log(termsErr);
             window.alert(termsErr);
-
             return;
         }
 
@@ -105,6 +105,26 @@ async fn index(_req: Request<Body>) -> Result<Response<Body>, Infallible> {
         meArea.style.background = 'url(' + URL.createObjectURL(file) + ')';
         meArea.style.backgroundRepeat = 'no-repeat';
         meArea.style.backgroundSize = '100% ' + chonkiness + '%';
+    };
+
+    terms.addEventListener('click', function(_e) {
+        meIn.value = null;
+    });
+
+    meIn.addEventListener('click', function(_e) {
+        meIn.value = null;
+    });
+    
+    meIn.addEventListener('change', function(_e) {
+        chonkIt();
+    });
+
+    chonk.addEventListener('change', function(_e) {
+        chonkIt();
+    });
+
+    chonk.addEventListener('input', function(_e) {
+        chonkIt();
     });
 })();
 </script>
