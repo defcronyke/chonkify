@@ -40,9 +40,10 @@ async fn index(_req: Request<Body>) -> Result<Response<Body>, Infallible> {
         &nbsp;
     </div>
 
-    <br /><br />
-
-    Part of <a href="https://eternalvoid.net" style="color: black;">The Eternal Void Network</a>.
+    <p>Part of <a href="https://eternalvoid.net" style="color: black;">The Eternal Void Network</a>.</p>
+    <p>Source code:<br />
+    <a href="https://github.com/defcronyke/chonkify" style="color: black;">https://github.com/defcronyke/chonkify</a><br />
+    <a href="https://gitlab.com/defcronyke/chonkify" style="color: black;">https://gitlab.com/defcronyke/chonkify</a></p>
 
 <script>
 
